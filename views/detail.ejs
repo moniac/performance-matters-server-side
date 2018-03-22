@@ -1,0 +1,16 @@
+<% include ./partials/head %>
+	<% if (building) { %>
+		<h2><%- building.name %></h2>
+
+	<% if (building.description) { %>
+		<p><%- building.description %></p>
+	<% } %>
+
+	<% if (building.startmin && building.endmin) { %>
+		<p>Dit gebouw heeft bestaan tussen <%- building.startmin %> en <%- building.endmin %>.</p>
+	<% } %>
+		
+	<% } %>
+	
+
+<% include ./partials/foot %>

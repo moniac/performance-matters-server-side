@@ -3,6 +3,7 @@ const express = require('express')
 const fetch = require('node-fetch')
 const path = require('path')
 const app = express()
+const port = 3000
 let data
 
 function getData() {
@@ -20,15 +21,23 @@ getData()
 
 app.set('view engine', 'ejs')
 
-app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use('/static', express.static(path.join(__dirname, '../public')))
 app.use(express.static('public'))
 
-const port = 3000
+
 
 app.get('/', (req, res) => {
-	console.log(data)
 	res.render('index', {
 		data
+	})
+})
+
+app.get('/building/:id', (req, res) => {
+	let building = data.filter(x => x.id === req.params.id)
+	console.log('131231231232', building[0])
+
+	res.render('detail', {
+		building: building[0]
 	})
 })
 
