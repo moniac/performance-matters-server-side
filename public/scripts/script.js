@@ -1,3 +1,6 @@
-console.log('hossssi')
+console.log('script.js works')
+console.log(data)
 
-const data = 'test'
+const a = [2, 40, 60]
+
+a.filter(x => x > 2)
