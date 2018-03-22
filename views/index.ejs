@@ -1,5 +1,16 @@
 <% include ./partials/head %>
-	
-	<p>ok</p>
+	<% if (data) { %>
+		<ul>
+			<% data.forEach((building) => { %>
+				<li>
+					<a href="<%-building.id%>">
+						<%-building.name%>
+					</a>
+				</li>
+				<%}) %>
+		</ul>
+		<%	} else { %>
+			<h2>Sorry, there is no data available!</h2>
+			<%	} %>
 
 <% include ./partials/foot %>
