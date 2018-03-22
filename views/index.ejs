@@ -1,6 +1,8 @@
 <% include ./partials/head %>
+
 	<% if (data) { %>
-		<ul>
+	<section>
+		<ul id='myUL'>
 			<% data.forEach((building) => { %>
 				<li>
 					<a href="/building/<%-building.id%>">
@@ -9,12 +11,17 @@
 				</li>
 				<%}) %>
 		</ul>
+	</section>
 		<%	} else { %>
 			<h2>Sorry, there is no data available!</h2>
 			<%	} %>
 
+
 <script async defer>
 	let data = <%- JSON.stringify( data )  %>
+
 </script>
+
+<script src='./scripts/bundle.js'></script>
 
 <% include ./partials/foot %>

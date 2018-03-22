@@ -1,0 +1,42 @@
+* {
+	text-align: center;
+}
+
+#myUL li {
+	list-style: none;
+	border: 1px solid black;
+	width: 25%;
+	text-align: center;
+	display: block;
+}
+
+#myUL li a {
+	display: block;
+	padding: 1.5rem;
+}
+
+#myUL li:hover,
+#myUL li:focus-within {
+	background: green;
+}
+
+#myUL {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2rem auto;
+	justify-content: center;
+	width: 80%;
+}
+
+h1, h2 {
+	text-align: center;
+	display: block;
+}
+
+input {
+	width: 75%;
+	margin: 0 auto;
+	display: block;
+	padding: 1rem;
+	font-size: 1rem;
+}
