@@ -1,26 +1,26 @@
-var newInput = document.createElement('input')
-var container = document.querySelector('section')
+let newInput = document.createElement('input')
+let container = document.querySelector('section')
 container.prepend(newInput)
 newInput.id = 'myInput'
-newInput.placeholder = 'Zoeken op gebouwen.'
+newInput.placeholder = 'Zoeken op gebouwen'
 
-var inputs = document.querySelector('#myInput')
+let inputs = document.querySelector('#myInput')
 
 inputs.addEventListener('keyup', myFunction)
 
 function myFunction () {
-	var input, filter, ul, li, a, i;
-	input = document.getElementById('myInput');
-	filter = input.value.toLowerCase();
-	ul = document.getElementById("myUL");
-	li = ul.getElementsByTagName('li');
+	let input, filter, ul, li, a, i
+	input = document.getElementById('myInput')
+	filter = input.value.toLowerCase()
+	ul = document.getElementById("myUL")
+	li = ul.getElementsByTagName('li')
 	
 	for (i = 0; i < li.length; i++) {
-		a = li[i].getElementsByTagName("a")[0];
+		a = li[i].getElementsByTagName("a")[0]
 		if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
-			li[i].style.display = "";
+			li[i].style.display = ""
 		} else {
-			li[i].style.display = "none";
+			li[i].style.display = "none"
 		}
 	}
 }
