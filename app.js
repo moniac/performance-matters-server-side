@@ -14,7 +14,7 @@ function getData() {
 			data = res.results.sort((a, b) => a.name.localeCompare(b.name))
 		} )
 		.catch( err => console.log( err ) )
-
+		
 }
 
 getData()
@@ -31,8 +31,6 @@ app.get('/', (req, res) => {
 
 app.get('/building/:id', (req, res) => {
 	let building = data.filter(x => x.id === req.params.id)
-	console.log('131231231232', building[0])
-
 	res.render('detail', {
 		building: building[0]
 	})
