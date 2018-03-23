@@ -56,6 +56,13 @@ Here I will write out what tricks I used to make the website perform better.
 #### Total time saved on first paint: 1.31 seconds 
 
 <details>
+<summary>Before Optimizing </summary>
+
+![Before](https://i.imgur.com/oogMVCD.jpg)
+
+</details>
+
+<details>
 <summary>Before & After Critical CSS </summary>
 
 This saved a lot of time!
@@ -71,6 +78,13 @@ This saved very little, but every gain is a gain.
 ![Before Async/Defer](https://i.imgur.com/Pavus7Y.png)
 
 ![After Async/Defer](https://i.imgur.com/lksRe4g.png)
+</details>
+
+<details>
+<summary>After Optimizing </summary>
+
+![After](https://i.imgur.com/xlHdd31.jpg)
+
 </details>
 
 #### Ideas for in the future
