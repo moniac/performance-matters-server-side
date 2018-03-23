@@ -4,6 +4,7 @@
 1. [Setting up](#setup)
 2. [Tooling](#tooling)
 3. [Optimizing](#optimizing)
+4. [End Game](#end-game)
 
 ## Setup
 
