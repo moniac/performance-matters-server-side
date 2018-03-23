@@ -1,9 +1,9 @@
 # performance-matters-server-side
 
 # Table of Contents
-1. [Setting up](#Setup)
-2. [Tooling](#Tooling)
-3. [Optimizing](#Optimizing)
+1. [Setting up](##Setup)
+2. [Tooling](##Tooling)
+3. [Optimizing](##Optimizing)
 4. [Progressive Enhancement](#Optimizing)
 
 ## Setup
