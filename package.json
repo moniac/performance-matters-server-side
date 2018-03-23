@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"watch": "watchify ./client/script.js -o ./public/scripts/bundle.js -v",
-	"build": "browserify client/script.js | uglifyjs -cm > public/scripts/bundle.js",
+    "watch": "watchify ./client/script.js -o ./public/scripts/bundle.js -v",
+    "build": "browserify ./client/script.js | uglifyjs -cm > public/scripts/bundle.js",
     "start": "npm run watch & nodemon app.js"
   },
   "repository": {
