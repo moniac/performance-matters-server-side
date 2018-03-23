@@ -1,10 +1,9 @@
 # performance-matters-server-side
 
 # Table of Contents
-1. [Setting up](##Setup)
-2. [Tooling](##Tooling)
-3. [Optimizing](##Optimizing)
-4. [Progressive Enhancement](#Optimizing)
+1. [Setting up](#setup)
+2. [Tooling](#tooling)
+3. [Optimizing](#optimizing)
 
 ## Setup
 
@@ -32,11 +31,31 @@ This will prepare the javascript code for deployment, minifying the Javascript c
 
 ``` "build": "browserify ./client/script.js | uglifyjs -cm > public/scripts/bundle.js" ```
 
+### Progressive Enhancement
+
+Currently, the website shows a list of buildings. Those who are fortunate enough to have Javascript enabled can use the input to search for specific buildings.
+
+Those who don't have it enabled won't see the input. The website will stil work just as fine.
+
+#### Ideas for in the future
+
+* #### Virtual DOM
+
+I'd like to use a virtual DOM to update the list of items. The one I am most familiar with is React, but it's a good excercise to use another one.
+
+* #### Service Worker
+
+With a service worker the list of data can be cached and loaded instantly, with no need for an internet connection.
+
 ### Optimizing
 
 The project doesn't have a lot of fancy CSS, but it does have a large amount of items. 
 
 Here I will write out what tricks I used to make the website perform better.
+
+### End Game
+
+#### Total time saved on first paint: 1.31 seconds 
 
 <details>
 <summary>Before & After Critical CSS </summary>
@@ -44,4 +63,12 @@ Here I will write out what tricks I used to make the website perform better.
 ![Before Critical CSS](https://i.imgur.com/6a34Zfi.png)
 
 ![After Critical CSS](https://i.imgur.com/6xmxKmu.png)
+</details>
+
+<details>
+<summary>Before & After Async Defer </summary>
+
+![Before Async/Defer](https://i.imgur.com/Pavus7Y.png)
+
+![After Async/Defer](https://i.imgur.com/lksRe4g.png)
 </details>
