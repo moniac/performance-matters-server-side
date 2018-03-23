@@ -3,7 +3,8 @@
 # Table of Contents
 1. [Setting up](#Setup)
 2. [Tooling](#Tooling)
-3. [Example](#example)
+3. [Optimizing](#Optimizing)
+4. [Progressive Enhancement](#Optimizing)
 
 ## Setup
 
@@ -31,3 +32,16 @@ This will prepare the javascript code for deployment, minifying the Javascript c
 
 ``` "build": "browserify ./client/script.js | uglifyjs -cm > public/scripts/bundle.js" ```
 
+### Optimizing
+
+The project doesn't have a lot of fancy CSS, but it does have a large amount of items. 
+
+Here I will write out what tricks I used to make the website perform better.
+
+<details>
+<summary>Before & After Critical CSS </summary>
+
+![Before Critical CSS](https://i.imgur.com/6a34Zfi.png)
+
+![After Critical CSS](https://i.imgur.com/6xmxKmu.png)
+</details>

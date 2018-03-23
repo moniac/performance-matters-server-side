@@ -4,17 +4,23 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var newInput = document.createElement('input');
-var container = document.querySelector('section');
-container.prepend(newInput);
-newInput.id = 'myInput';
-newInput.placeholder = 'Zoeken op gebouwen';
+var container = document.querySelector('#buildinglist');
 
-var inputs = document.querySelector('#myInput');
+if (container) {
+	var newInput = document.createElement('input');
+	newInput.id = 'myInput';
+	newInput.placeholder = 'Zoeken op gebouwen';
+	container.prepend(newInput);
 
-inputs.addEventListener('keyup', filterList);
+	var inputs = document.querySelector('#myInput');
+
+	inputs.addEventListener('keyup', filterList);
+}
 
 function filterList() {
+	if (!container) {
+		return;
+	}
 	var input = void 0,
 	    filter = void 0,
 	    ul = void 0,

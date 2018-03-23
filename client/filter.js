@@ -1,14 +1,18 @@
-let newInput = document.createElement('input')
-let container = document.querySelector('section')
-container.prepend(newInput)
-newInput.id = 'myInput'
-newInput.placeholder = 'Zoeken op gebouwen'
+let container = document.querySelector('#buildinglist')
 
-let inputs = document.querySelector('#myInput')
-
-inputs.addEventListener('keyup', filterList)
+if (container) {
+	let newInput = document.createElement('input')
+	newInput.id = 'myInput'
+	newInput.placeholder = 'Zoeken op gebouwen'
+	container.prepend(newInput)
+	
+	let inputs = document.querySelector('#myInput')
+	
+	inputs.addEventListener('keyup', filterList)
+}
 
 function filterList () {
+	if (!container) {return}
 	let input, filter, ul, li, a, i
 	input = document.getElementById('myInput')
 	filter = input.value.toLowerCase()
