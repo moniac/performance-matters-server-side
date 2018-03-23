@@ -41,6 +41,10 @@ Currently, the website shows a list of buildings. Those who are fortunate enough
 
 Those who don't have it enabled won't see the input. The website will stil work just as fine.
 
+The workings of that can be found in the filter.js file in the public folder.
+
+I've also added a check to monitor if someone has an internet connection or not. That can be found in checkinternet.js
+
 ### Optimizing
 
 The project doesn't have a lot of fancy CSS, but it does have a large amount of items. 
