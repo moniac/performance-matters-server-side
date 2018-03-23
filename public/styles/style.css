@@ -1,16 +1,3 @@
-* {
-	text-align: center;
-}
-
-#myUL li {
-	list-style: none;
-	border: 1px solid black;
-	width: 25%;
-	text-align: center;
-	display: block;
-	margin: 0.1rem;
-}
-
 #myUL li a {
 	display: block;
 	padding: 1rem;
@@ -22,19 +9,6 @@
 #myUL li:focus-within a {
 	background: green;
 	color: white;
-}
-
-#myUL {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 2rem auto;
-	justify-content: center;
-	width: 80%;
-}
-
-h1, h2 {
-	text-align: center;
-	display: block;
 }
 
 input {

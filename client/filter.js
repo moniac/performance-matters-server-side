@@ -6,9 +6,9 @@ newInput.placeholder = 'Zoeken op gebouwen'
 
 let inputs = document.querySelector('#myInput')
 
-inputs.addEventListener('keyup', myFunction)
+inputs.addEventListener('keyup', filterList)
 
-function myFunction () {
+function filterList () {
 	let input, filter, ul, li, a, i
 	input = document.getElementById('myInput')
 	filter = input.value.toLowerCase()
@@ -26,4 +26,4 @@ function myFunction () {
 }
 	
 
-export { myFunction }
+export { filterList }
