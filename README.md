@@ -11,7 +11,10 @@
 
 To run this project:
 
-``` git clone && npm run start ```
+``` git clone ``` 
+``` npm install ```
+``` npm run start ```
+
 
 This will get watchify to watch the files & make the project available at http://localhost:3000.
 
