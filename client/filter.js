@@ -5,6 +5,10 @@ if (container) {
 	newInput.id = 'myInput'
 	newInput.placeholder = 'Zoeken op gebouwen'
 	container.prepend(newInput)
+	let newLabel = document.createElement('label')
+	newLabel.htmlFor = newInput.id
+	newLabel.innerHTML = 'Filter'
+	container.insertBefore(newLabel, newInput)
 	
 	let inputs = document.querySelector('#myInput')
 	

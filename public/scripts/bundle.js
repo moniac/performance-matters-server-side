@@ -33,6 +33,10 @@ if (container) {
 	newInput.id = 'myInput';
 	newInput.placeholder = 'Zoeken op gebouwen';
 	container.prepend(newInput);
+	var newLabel = document.createElement('label');
+	newLabel.htmlFor = newInput.id;
+	newLabel.innerHTML = 'Filter';
+	container.insertBefore(newLabel, newInput);
 
 	var inputs = document.querySelector('#myInput');
 
