@@ -1,3 +1,5 @@
+// met dank aan Alex van der Wal https://github.com/cascuna
+
 var SW_CONSOLE_PREFIX = '[Service Worker]'
 var PRE_CACHE_VERSION = '-v1'
 var PRE_CACHE_NAME = 'precache'
@@ -13,7 +15,8 @@ self.addEventListener('install', function(event) {
             console.log(SW_CONSOLE_PREFIX)
             cache.addAll([
                 '/',
-                '/offline/',
+				'/offline/',
+				'/offline/index.html',
                 'scripts/js/bundle.js'
             ])
         })
@@ -60,7 +63,8 @@ self.addEventListener('fetch', function(event){
                     })
                 })
                 .catch(function(error){
-                    return caches.open(PRE_CACHE_NAME + PRE_CACHE_VERSION)
+					return caches.open(PRE_CACHE_NAME + PRE_CACHE_VERSION)
+					// dit werkt gek genoeg niet
                     .then(function(cache) {
                         return cache.match('/offline')    
                     })

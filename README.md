@@ -106,3 +106,16 @@ With a service worker the list of data can be cached and loaded instantly, with 
 
 ### Adding Service Workers
 
+The Voorhoede gave us a presentation on Service Workers. A very exciting technology that works on a seperate thread, it's very useful to cache files so it can display it when you lose internet access for example.
+
+Currently, the service worker caches the index.html, Javascript, and the CSS.
+
+### Other fixes
+
+* Fixed the SEO, by adding
+
+```<meta name='author' content='Mohammed Mulazada'> <meta name='keywords' content='sample'>```
+
+* Pushed the project to my live server, using webhooks to make each commit get pulled to the server automatically
+
+![All in all](http://i.imgur.com/zE5JLkM.jpg)
