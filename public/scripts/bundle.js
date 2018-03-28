@@ -15,7 +15,6 @@ function updateIndicatorOnline() {
 }
 
 window.addEventListener('offline', updateIndicator);
-
 window.addEventListener('online', updateIndicatorOnline);
 
 exports.updateIndicator = updateIndicator;

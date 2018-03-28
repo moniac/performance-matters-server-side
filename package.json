@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "expose": "ngrok http 3000",
     "watch": "watchify ./client/script.js -o ./public/scripts/bundle.js -v",
     "build": "browserify ./client/script.js | uglifyjs -cm > public/scripts/bundle.js",
-    "start": "npm run watch & nodemon app.js"
+    "start": "npm run watch & nodemon app.js",
+    "now-start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",
     "browserify": "^16.1.1",
+    "ngrok": "^3.0.1",
     "uglify-js": "^3.3.16",
     "watchify": "^3.11.0"
   },

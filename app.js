@@ -22,11 +22,16 @@ getData()
 app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, '/public/')))
+app.use(express.static(path.join(__dirname, '/src/')))
 
 app.get('/', (req, res) => {
 	res.render('index', {
 		data
 	})
+})
+
+app.get('/offline', (req, res) => {
+	res.render('offline')
 })
 
 app.get('/building/:id', (req, res) => {

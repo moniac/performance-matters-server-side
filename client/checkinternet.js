@@ -9,7 +9,6 @@ function updateIndicatorOnline() {
 }
 
 window.addEventListener('offline', updateIndicator)
-
 window.addEventListener('online',  updateIndicatorOnline)
 
 export { updateIndicator, updateIndicatorOnline }
