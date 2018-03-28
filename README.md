@@ -6,6 +6,9 @@
 3. [Optimizing](#optimizing)
 4. [End Game](#end-game)
 5. [Ideas for in the future](#ideas-for-in-the-future)
+6. [Adding service workers](#adding-service-workers)
+
+The project is available at https://building.mohammedmulazada.nl/
 
 ## Setup
 
@@ -99,3 +102,7 @@ I'd like to use a virtual DOM to update the list of items. The one I am most fam
 * #### Service Worker
 
 With a service worker the list of data can be cached and loaded instantly, with no need for an internet connection.
+
+
+### Adding Service Workers
+
